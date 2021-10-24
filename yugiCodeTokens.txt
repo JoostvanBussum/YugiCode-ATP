@@ -1,0 +1,38 @@
+-------------------------------------------------------
+bool even(unsigned int n);
+bool odd(unsigned int n);
+
+bool odd(unsigned int n){
+if(n==0){return false;}
+return even(n-1);
+}
+
+bool even(unsigned int n) {
+if(n==0){return true;}
+return odd(n-1);
+}
+-------------------------------------------------------
+Tokens:
+	"bool": stamp
+	"int" : gloriousNumbers
+
+	"(" : drawPhase
+	")" : standbyPhase
+
+	"{" : mainPhase 
+	"}" : endPhase
+
+	";" : nextPhase
+	"if" : resolves?
+
+	"==" : lifeEqualizer
+	"-" : levelReturner
+	"+" : mathmechAddition
+
+	"true" : trueDraco
+	"false" : solemnJudgment
+
+	"return" : bounce
+	"def" : summon
+
+-------------------------------------------------------
