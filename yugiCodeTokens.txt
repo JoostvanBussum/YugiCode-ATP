@@ -12,9 +12,17 @@ if(n==0){return true;}
 return odd(n-1);
 }
 -------------------------------------------------------
+Functies omgezet
+
+
+
+
+
+-------------------------------------------------------
 Tokens:
 	"bool": stamp
 	"int" : gloriousNumbers
+	"unsigned int" : TrueKingOfAllCalamities
 
 	"(" : drawPhase
 	")" : standbyPhase
