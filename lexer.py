@@ -147,8 +147,6 @@ tokenDict['solemnJudgment'] = ("False", lambda: FalseToken())
 tokenDict['bounce'] = ("Return", lambda: Return())
 tokenDict['Variable'] = ('Variable', lambda: Variable())
 
-words = []
-
 def lexYugiCode(prog: str, lexed: list[Token]) -> List[Token]:
     if not prog:
         return lexed
@@ -178,11 +176,3 @@ def extractWords(prog: str, words: List[str], word: str = ""):
     else:
         word += c
         return extractWords(progrest, words, word)
-
-
-
-prog = "stamp odd drawPhase TrueKingOfAllCalamities n standbyPhase mainPhase resolves? drawPhase n lifeEqualizer 0 standbyPhase mainPhase bounce trueDraco nextPhase endPhase bounce even drawPhase n levelReturner 10 standbyPhase nextPhase endPhase"
-progWords = extractWords(prog, words)
-
-lexed = lexYugiCode(progWords, [])
-print(lexed)
