@@ -3,15 +3,19 @@ from typing import List
 
 class Token:
     def __init__(self):
-        self.x = 1
+        self.x = None
 
     def __repr__(self):
         return "undefined"
 
 
 class FunctionDef(Token):
+    def setValue(self, value):
+        self.x = value
+        return self
+
     def __repr__(self):
-        return "funcDef"
+        return "function: " + str(self.x)
 
 
 class Bool(Token):
@@ -20,8 +24,15 @@ class Bool(Token):
         return self
 
     def __repr__(self):
-        return "TypeDec: Bool " + str(self.x)
+        return "TypeDec: Bool"
 
+class returnTypeBool(Token):
+    def setValue(self, value):
+        self.x = value
+        return self
+
+    def __repr__(self):
+        return "Return type: Bool of function: " + str(self.x)
 
 class Int(Token):
     def setValue(self, value):
@@ -53,7 +64,7 @@ class CloseParen(Token):
 
 class OpenCurly(Token):
     def __repr__(self):
-        return "OpenParen"
+        return "OpenCurly"
 
 
 class CloseCurly(Token):
@@ -146,6 +157,7 @@ tokenDict['trueDraco'] = ("True", lambda: TrueToken())
 tokenDict['solemnJudgment'] = ("False", lambda: FalseToken())
 tokenDict['bounce'] = ("Return", lambda: Return())
 tokenDict['Variable'] = ('Variable', lambda: Variable())
+
 
 def lexYugiCode(prog: str, lexed: list[Token]) -> List[Token]:
     if not prog:
