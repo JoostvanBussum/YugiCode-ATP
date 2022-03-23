@@ -14,7 +14,7 @@ return odd(n-1);
 -------------------------------------------------------
 Functies omgezet
 
-summon stamp odd drawPhase TrueKingOfAllCalamities n standbyPhase mainPhase
+summon odd stamp drawPhase TrueKingOfAllCalamities n standbyPhase mainPhase
 	resolves? drawPhase n lifeEqualizer 0 standbyPhase mainPhase bounce trueDraco nextPhase endPhase
 	bounce even drawPhase n levelReturner 1 standbyPhase nextPhase
 endPhase

@@ -1,9 +1,13 @@
 from lexer import lexYugiCode, extractWords, Token
+from parseYugiCode import parse
 
 
-prog = "stamp summon odd drawPhase TrueKingOfAllCalamities n standbyPhase mainPhase resolves? drawPhase n lifeEqualizer 0 standbyPhase mainPhase bounce trueDraco nextPhase endPhase bounce even drawPhase n levelReturner 10 standbyPhase nextPhase endPhase"
+prog = "summon odd stamp drawPhase TrueKingOfAllCalamities n standbyPhase mainPhase resolves? drawPhase n lifeEqualizer 0 standbyPhase mainPhase bounce trueDraco nextPhase endPhase bounce even drawPhase 10 levelReturner 10 standbyPhase nextPhase endPhase absoluteEnd"
 progWords = extractWords(prog, [])
 
 lexed = lexYugiCode(progWords, [])
 print(lexed)
-print(type(lexed[4]))
+# parsed = parse(lexed)
+
+# nodes = lexed[0:-1]
+# print(nodes)

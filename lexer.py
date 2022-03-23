@@ -26,13 +26,13 @@ class Bool(Token):
     def __repr__(self):
         return "TypeDec: Bool"
 
-class returnTypeBool(Token):
-    def setValue(self, value):
-        self.x = value
-        return self
+# class returnTypeBool(Token):
+#     def setValue(self, value):
+#         self.x = value
+#         return self
 
-    def __repr__(self):
-        return "Return type: Bool of function: " + str(self.x)
+#     def __repr__(self):
+#         return "Return type: Bool of function: " + str(self.x)
 
 class Int(Token):
     def setValue(self, value):
